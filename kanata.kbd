@@ -27,15 +27,15 @@ configuration entries.
 )
 
 (defsrc
-  caps grv spc
+  caps grv tab
 )
 
 (deflayer default
-  @cap @grv @space
+  @cap @grv @tab
   )
 
 (defalias
   cap (tap-hold-press 500 500 esc lctl)
   grv (tap-hold-press 500 500 grv lrld)
-  space (tap-hold-press 500 500 spc lmet)
+  tab (tap-hold-press 500 500 tab lmet)
 )
