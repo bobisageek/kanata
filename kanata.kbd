@@ -27,15 +27,29 @@ configuration entries.
 )
 
 (defsrc
-  caps grv tab
+  grv
+  tab q w e r t y u i o p
+  caps a s d f g h j k l ;
+  lshift z x c v b n m , . /
 )
 
 (deflayer default
-  @cap @grv @tab
+  @grv
+  @tab q w e r t y u i o p
+  @cap @a-toggle s d f g h j k l ;
+  lshift z x c v b n m , . /
+  )
+
+(deflayer arrows
+  @grv
+  @tab _ _ _ _ _ _ _ _ _ _
+  @cap _ _ _ _ _ left down up right _
+  _    _ _ _ _ _ _ _ _ _ _
   )
 
 (defalias
   cap (tap-hold-press 500 500 esc lctl)
   grv (tap-hold-press 500 500 grv lrld)
   tab (tap-hold-press 500 500 tab lmet)
+  a-toggle (tap-hold-press 500 500 a (layer-while-held arrows))
 )
