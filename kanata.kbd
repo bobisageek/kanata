@@ -47,7 +47,7 @@ configuration entries.
 (deflayer arrows
   esc
   grv
-  tab _ _ _ _ _ _ _ _ _ _
+  tab _ _ _ _ _ _ home pgdn pgup end
   @cap _ _ _ _ _ left down up right _
   _    _ _ _ _ _ _ _ _ _ _
   lctl lmet lalt spc ralt  rctl
