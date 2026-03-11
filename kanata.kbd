@@ -41,7 +41,7 @@ configuration entries.
   @tab q w e r t y u i o p
   @cap a s d f g h j k l ;
   lshift z x c v b n m , . /
-  lctl lmet lalt spc ralt  rctl
+  lctl lmet lalt spc ralt  @hyper
   )
 
 (deflayer arrows
@@ -50,7 +50,7 @@ configuration entries.
   tab _ _ _ _ _ _ home pgdn pgup end
   @cap _ _ _ _ _ left down up right _
   _    _ _ _ _ _ _ _ _ _ _
-  lctl lmet lalt spc ralt  rctl
+  lctl lmet lalt spc ralt  @hyper
   )
 
 (defalias
@@ -58,4 +58,5 @@ configuration entries.
   esc (tap-hold-press 500 500 esc lrld)
   tab (tap-hold-press 500 500 tab lmet)
   grv (tap-hold-press 500 500 grv (layer-while-held arrows))
+  hyper (multi lsft lctl lalt lmet)
 )
