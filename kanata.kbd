@@ -26,6 +26,10 @@ configuration entries.
   process-unmapped-keys yes
 )
 
+(defvar
+  tap-time 200
+  hold-time 200)
+
 (defsrc
   esc
   grv
@@ -38,9 +42,9 @@ configuration entries.
 (deflayer default
   @esc
   @grv
-  @tab q w e r t y u i o p
-  @cap a s d f g h j k l ;
-  lshift z x c v b n m , . /
+  @tab q      w      e      r      t y u      i      o      p
+  @cap @hrm-a @hrm-s @hrm-d @hrm-f g h @hrm-j @hrm-k @hrm-l @hrm-semicolon
+  lshift z    x      c      v      b n m      ,      .      /
   lctl lmet lalt spc ralt  @hyper
   )
 
@@ -59,4 +63,12 @@ configuration entries.
   tab (tap-hold-press 500 500 tab lmet)
   grv (tap-hold-press 500 500 grv (layer-while-held arrows))
   hyper (multi lsft lctl lalt lmet)
+  hrm-a (tap-hold $tap-time $hold-time a lsft)
+  hrm-s (tap-hold $tap-time $hold-time s lctl)
+  hrm-d (tap-hold $tap-time $hold-time d lmet)
+  hrm-f (tap-hold $tap-time $hold-time f lalt)
+  hrm-j (tap-hold $tap-time $hold-time j lalt)
+  hrm-k (tap-hold $tap-time $hold-time k lmet)
+  hrm-l (tap-hold $tap-time $hold-time l lctl)
+  hrm-semicolon (tap-hold $tap-time $hold-time ; lsft)
 )
