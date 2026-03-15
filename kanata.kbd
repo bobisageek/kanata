@@ -45,7 +45,7 @@ configuration entries.
             @tab q      w      e      r      t y u      i      o      p
             @cap @hrm-a @hrm-s @hrm-d @hrm-f g h @hrm-j @hrm-k @hrm-l @hrm-semicolon
   F19 @meh  lshift z    x      c      v      b n m      ,      .      /
-            lctl lmet lalt spc ralt  @hyper
+            lctl lmet lalt @spc-arrows ralt  @hyper
   )
 
 (deflayer arrows
@@ -54,7 +54,7 @@ configuration entries.
             tab _ _ _ _ _ _ home pgdn pgup end
             @cap _ _ _ _ _ left down up right _
    F19 @meh _    _ _ _ _ _ _ _ _ _ _
-            lctl lmet lalt spc ralt  @hyper
+            lctl lmet lalt @spc-arrows ralt  @hyper
   )
 
 (defalias
@@ -64,6 +64,7 @@ configuration entries.
   grv (tap-hold-press 500 500 grv (layer-while-held arrows))
   hyper (multi lsft lctl lalt lmet)
   meh (multi lctl lmet lalt)
+  spc-arrows (tap-hold $tap-time $hold-time spc (layer-while-held arrows))
   hrm-a (tap-hold $tap-time $hold-time a lsft)
   hrm-s (tap-hold $tap-time $hold-time s lctl)
   hrm-d (tap-hold $tap-time $hold-time d lmet)
