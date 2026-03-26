@@ -58,12 +58,12 @@ configuration entries.
   )
 
 (defalias
-  cap (tap-hold-press 500 500 esc lctl)
+  meh (multi lctl lmet lalt)
+  cap (tap-hold-press 500 500 esc @meh)
   esc (tap-hold-press 500 500 esc lrld)
   tab (tap-hold-press 500 500 tab lmet)
   grv (tap-hold-press 500 500 grv (layer-while-held arrows))
   hyper (multi lsft lctl lalt lmet)
-  meh (multi lctl lmet lalt)
   spc-arrows (tap-hold $tap-time $hold-time spc (layer-while-held arrows))
   hrm-a (tap-hold $tap-time $hold-time a lsft)
   hrm-s (tap-hold $tap-time $hold-time s lctl)
