@@ -53,7 +53,7 @@ configuration entries.
 (deflayer arrows
             esc
             grv
-            tab _ _ _ r _ _ home pgdn pgup end
+            tab _ _ _ r _ bspc home pgdn pgup end
             @cap _ _ _ f _ left down up right _
   F19 F20   @fst mlft mmid mrgt v _ _ _ , _ / _ @m↑
             lctl lmet lalt @spc-arrows ralt  @hyper @m← @m↓ @m→
