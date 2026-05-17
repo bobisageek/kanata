@@ -30,7 +30,8 @@ configuration entries.
   tap-time 200
   hold-time 200
   mouse-interval 3
-  mouse-distance 1)
+  mouse-distance 1
+  mwheel-distance 40)
 
 (defsrc
             esc
@@ -47,16 +48,16 @@ configuration entries.
             @tab q      w      e      r      t y u      i      o      p
             @cap @hrm-a @hrm-s @hrm-d @hrm-f g h @hrm-j @hrm-k @hrm-l @hrm-semic
   F19 F20   lshift z    x      c      v      b n m      ,      .      / rshift up
-            lctl lmet lalt @spc-arrows ralt  @hyper  left down right
+            lctl lmet lalt @spc-raised ralt  @hyper  left down right
 )
 
-(deflayer arrows
+(deflayer raised
             esc
             grv
-            tab _ _ _ r _ bspc home pgdn pgup end
-            @cap _ _ _ f _ left down up right _
+            tab _ @mw↑ _ r _ bspc home pgdn pgup end
+            @cap @mw← @mw↓ @mw→ f _ left down up right _
   F19 F20   @fst mlft mmid mrgt v _ _ _ , _ / _ @m↑
-            lctl lmet lalt @spc-arrows ralt  @hyper @m← @m↓ @m→
+            lctl lmet lalt @spc-raised ralt  @hyper @m← @m↓ @m→
 )
 
 (defalias
@@ -64,9 +65,9 @@ configuration entries.
   cap (tap-hold-press 500 500 esc @meh)
   esc (tap-hold-press 500 500 esc lrld)
   tab (tap-hold-press 500 500 tab lmet)
-  grv (tap-hold-press 500 500 grv (layer-while-held arrows))
+  grv (tap-hold-press 500 500 grv (layer-while-held raised))
   hyper (multi lsft lctl lalt lmet)
-  spc-arrows (tap-hold $tap-time $hold-time spc (layer-while-held arrows))
+  spc-raised (tap-hold $tap-time $hold-time spc (layer-while-held raised))
   hrm-a (tap-hold $tap-time $hold-time a lsft)
   hrm-s (tap-hold $tap-time $hold-time s lctl)
   hrm-d (tap-hold $tap-time $hold-time d lmet)
@@ -79,5 +80,9 @@ configuration entries.
   m← (movemouse-left $mouse-interval $mouse-distance)
   m↓ (movemouse-down $mouse-interval $mouse-distance)
   m→ (movemouse-right $mouse-interval $mouse-distance)
+  mw↑ (mwheel-up $mouse-interval $mwheel-distance)
+  mw← (mwheel-left $mouse-interval $mwheel-distance)
+  mw↓ (mwheel-down $mouse-interval $mwheel-distance)
+  mw→ (mwheel-right $mouse-interval $mwheel-distance)
   fst (movemouse-speed 200)
 )
