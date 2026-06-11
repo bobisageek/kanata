@@ -54,7 +54,7 @@ configuration entries.
 (deflayer raised
             esc
             grv
-            tab _ @mw↑ _ r _ bspc home pgdn pgup end
+            @qclick _ @mw↑ _ r _ bspc home pgdn pgup end
             @cap @mw← @mw↓ @mw→ f _ left down up right _
   F19 F20   @fst mlft mmid mrgt v _ _ _ , _ / _ @m↑
   M-/       lctl lmet lalt @spc-raised ralt  @hyper @m← @m↓ @m→
@@ -85,4 +85,5 @@ configuration entries.
   mw↓ (mwheel-down $mouse-interval $mwheel-distance)
   mw→ (mwheel-right $mouse-interval $mwheel-distance)
   fst (movemouse-speed 200)
+  qclick (macro-repeat mltp 30)
 )
